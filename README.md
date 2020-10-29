@@ -66,11 +66,11 @@ db, err = sql.Open("mysql", "<root>:<password>@/<dbname>")
 db, err = sql.Open("mysql", "myUsername:myPassword@/myDatabase")
 ```
 
-* Cd to main folder
-* Run the following command:
+* Cd to main folder  
+* Run the following command:  
 
-go build
-go run .
+go build  
+go run .  
 
 
 
