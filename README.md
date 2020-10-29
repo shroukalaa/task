@@ -58,7 +58,8 @@ go get github.com/gorilla/securecookie
 
 ```
 
-Inside of **main/main.go** line **20** replace <example> with your own credentials
+Inside of **main/main.go** line **20** replace <example> with your own credentials  
+	
 Inside of **sqlconnection/connection.go** line **17** replace <example> with your own credentials
 ```go
 db, err = sql.Open("mysql", "<root>:<password>@/<dbname>")
