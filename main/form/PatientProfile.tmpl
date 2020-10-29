@@ -1,0 +1,55 @@
+{{ define "PatientProfile" }}
+  {{ template "Header" }}
+    {{ template "PatientMenu"  }}
+    <h2> your info: {{ .PatientInfo }} </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>Doctor Name</td>
+        <td>Available</td>
+		<td>Patient</td>
+        <td>DateTime</td>
+		<td>Cancel Booking</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range .Appointments }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td> {{ .DocName }} </td>
+        <td>{{ .Available }} </td> 
+		 <td> {{ .Patient }} </td>
+        <td>{{ .DateTime }} </td> 
+		<td><a href="/cancelBooking?id={{ .Id }}">Cancel Booking</a><td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+	<h3> Doctors </h3>
+	<table border="1">
+      <thead>
+      <tr>
+        <td> Username </td>
+        <td>Address</td>
+		<td>Specialization</td>
+        <td>Full name</td>
+		<td>View</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range .Doctors }}
+      <tr>
+        <td>{{ .DatabaseUsername }}</td>
+        <td> {{ .DatabaseAddress }} </td>
+        <td>{{ .DatabaseSpecialization }} </td> 
+		<td> {{ .DatabaseDoctorname }} </td>
+		<td><a href="/Show?docname={{ .DatabaseUsername }}">View</a></td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}
+
+

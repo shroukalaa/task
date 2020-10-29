@@ -1,0 +1,32 @@
+{{ define "Profile" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> {{ .DoctorInfo }} </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>Doctor Name</td>
+        <td>Available</td>
+		<td>Patient</td>
+        <td>DateTime</td>
+		<td>Delete</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range .Appointments }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td> {{ .DocName }} </td>
+        <td>{{ .Available }} </td> 
+		<td> {{ .Patient }} </td>
+        <td>{{ .DateTime }} </td> 
+		<td><a href="/Delete?id={{ .Id }}">Delete</a><td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}
+
+

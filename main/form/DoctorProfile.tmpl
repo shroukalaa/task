@@ -1,0 +1,30 @@
+{{ define "DoctorProfile" }}
+  {{ template "Header" }}
+    {{ template "PatientMenu"  }}
+    <h2> {{ .DoctorInfo }} </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>Doctor Name</td>
+		<td>Patient</td>
+        <td>DateTime</td>
+		<td>Book</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range .Appointments }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td> {{ .DocName }} </td>
+		<td> {{ .Patient }} </td>
+        <td>{{ .DateTime }} </td> 
+		<td><a href="/book?id={{ .Id }}">Book</a><td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}
+
+
