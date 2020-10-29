@@ -1,11 +1,11 @@
 ### Golang MySQL 
-*This website is designed to allow patients to book appointments with doctors.
-*doctor have to sign up with thier info name,Specialization,Address,full name.
-*doctors will be able to add new appointmment slots and delete appointments after being loged in.
-*patient have to sign up with thier info username, full name.
-*patients are able to view all doctors and thier info when logged in.
-*each appointment is created by the doctor with  a default available status and the choosed date 
-*then when a patient can book it and it will not available any more and the patient username is added.
+*This website is designed to allow patients to book appointments with doctors.  
+*doctor have to sign up with thier info name,Specialization,Address,full name.  
+*doctors will be able to add new appointmment slots and delete appointments after being loged in.  
+*patient have to sign up with thier info username, full name.  
+*patients are able to view all doctors and thier info when logged in.  
+*each appointment is created by the doctor with  a default available status and the choosed date   
+*then when a patient can book it and it will not available any more and the patient username is added.  
 
 #### Requires: 
 
